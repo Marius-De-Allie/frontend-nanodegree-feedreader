@@ -32,7 +32,10 @@ $(function() {
          * and that the URL is not empty.
          */
          it('url defined', function() {
-           
+            for (let feed of allFeeds) {
+              
+            }
+
          })
 
 
