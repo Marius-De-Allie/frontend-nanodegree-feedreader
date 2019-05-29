@@ -45,6 +45,7 @@ $(function() {
          */
          it('name defined', function() {
            for (let feed of allFeeds) {
+             expect(feed['name']).toBeDefined();
 
            };
          });
