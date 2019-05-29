@@ -54,7 +54,7 @@ $(function() {
 
     /* TODO: Write a new test suite named "The menu" */
     describe('The menu', function() {
-      const body = document.querySelector('.menu-hidden');
+      const body = document.querySelector('body');
       it('menu hidden', function() {
         expect(body.className).toContain('menu-hidden');
       });
