@@ -58,6 +58,9 @@ $(function() {
       it('menu hidden', function() {
         expect(body.className).toContain('menu-hidden');
       });
+      it('menu toggle', function() {
+
+      });
     });
 
         /* TODO: Write a test that ensures the menu element is
