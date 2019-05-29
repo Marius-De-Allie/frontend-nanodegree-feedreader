@@ -56,8 +56,8 @@ $(function() {
     describe('The menu', function() {
       const body = document.querySelector('.menu-hidden');
       it('menu hidden', function() {
+        expect(body.className).toContain('menu-hidden');
       });
-
     });
 
         /* TODO: Write a test that ensures the menu element is
