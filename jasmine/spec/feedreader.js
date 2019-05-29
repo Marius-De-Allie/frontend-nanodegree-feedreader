@@ -54,7 +54,10 @@ $(function() {
 
     /* TODO: Write a new test suite named "The menu" */
     describe('The menu', function() {
-      
+      it('menu hidden', function() {
+
+      });
+
     })
 
         /* TODO: Write a test that ensures the menu element is
