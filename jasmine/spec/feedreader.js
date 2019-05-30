@@ -90,7 +90,7 @@ $(function() {
         loadFeed(0, done);
       });
       it('are feeds loaded', function () {
-
+        expect(feed.children.length).toBeGreaterThan(0);
       });
     });
     /* TODO: Write a new test suite named "New Feed Selection" */
