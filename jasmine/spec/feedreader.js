@@ -109,7 +109,9 @@ $(function() {
         loadFeed(1, done);
       });
       it('does feed content change', function() {
-
+        Array.from(feed.children).forEach(function(entry, index) {
+          expect(entry.innerText === feedOne[index]).toBe(false);  
+        });
       });
     });
 }());
