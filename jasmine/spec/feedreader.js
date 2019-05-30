@@ -70,7 +70,8 @@ $(function() {
           */
       it('menu toggle', function() {
         const menuIcon = document.querySelector('.menu-icon-link');
-        menuIcon.click();        
+        menuIcon.click();
+        expect(body.classList.contains('menu-hidden')).not.toBe(true);     
       });
     });
 
