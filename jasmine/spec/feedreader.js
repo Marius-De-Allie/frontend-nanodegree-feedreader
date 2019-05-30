@@ -73,6 +73,8 @@ $(function() {
         menuIcon.click();
         expect(body.classList.contains('menu-hidden')).not.toBe(true);
         menuIcon.click();
+        expect(body.classList.contains('menu-hidden')).toBe(true);
+
       });
     });
 
