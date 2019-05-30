@@ -89,6 +89,9 @@ $(function() {
       beforeEach(function(done) {
         loadFeed(0, done);
       });
+      it('are feeds loaded', function () {
+
+      });
     });
     /* TODO: Write a new test suite named "New Feed Selection" */
 
