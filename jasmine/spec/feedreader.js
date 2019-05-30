@@ -99,6 +99,7 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+      const feed = document.querySelector('.feed');
       const feedOne = [];
       beforeEach(function(done) {
         loadFeed(0);
