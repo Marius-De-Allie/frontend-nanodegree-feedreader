@@ -100,6 +100,13 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
       const feedOne = [];
+      beforeEach(function(done) {
+        loadFeed(0);
+        Array.from(feed.children).forEach(function(entry) {
+          feedOne.push(entry.innerText);
+        });
+        loadFeed(1, done);
+      });
       it('does feed content change', function() {
 
       });
