@@ -110,7 +110,9 @@ $(function() {
       });
       it('does feed content change', function() {
         Array.from(feed.children).forEach(function(entry, index) {
-          expect(entry.innerText === feedOne[index]).toBe(false);  
+          const currentFeedContent = entry.innerText;
+          const feedOneContent = feedOne[index];
+          expect(currentFeedContent).not.toBe(feedOneContent);
         });
       });
     });
