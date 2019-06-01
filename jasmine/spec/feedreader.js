@@ -21,7 +21,7 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
-        it('are defined', function() {
+        it('is allFeeds defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
@@ -29,7 +29,7 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-        it('url defined', function() {
+        it('is url defined', function() {
           for (let feed of allFeeds) {
             expect(feed['url']).toBeDefined(); //test that url property is
             //defined for each object in the allFeeds array.
@@ -41,7 +41,7 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-        it('name defined', function() {
+        it('is name defined', function() {
           for (let feed of allFeeds) {
             expect(feed['name']).toBeDefined(); //test that name property is
             //defined for each object in the allFeeds array.
@@ -61,7 +61,7 @@ $(function() {
            * the CSS to determine how we're performing the
            * hiding/showing of the menu element.
            */
-        it('menu hidden', function() {
+        it('is menu hidden', function() {
         /* Test that the body DOM element has the class attribute value of
          * 'menu-hidden' on initial page load.
          */
@@ -72,7 +72,7 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-      it('menu toggle', function() {
+      it('does menu toggle', function() {
         const menuIcon = document.querySelector('.menu-icon-link');
         menuIcon.click(); // Simulate a click event on menuIcon DOM element.
         /* Test that the body DOM element does not have the class attribute
