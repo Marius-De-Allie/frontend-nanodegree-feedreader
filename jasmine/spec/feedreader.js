@@ -102,10 +102,10 @@ $(function() {
         loadFeed(0, done);
       });
       it('are feeds loaded', function () {
-        /* Check that the feed DOM element has at least 1 child object, if true
-         * this means feed has loaded successfully.
+        /* Check that the feed DOM element contains at least 1 .entry child
+         * element , if true this means feed has loaded successfully.
          */
-        expect(feed.children.length).toBeGreaterThan(0);
+        expect(feed.querySelectorAll('.entry').length).toBeGreaterThan(0);
       });
     });
     /* Declare test suite named 'New Feed Selection', which contains test that
