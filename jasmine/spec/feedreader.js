@@ -113,33 +113,28 @@ $(function() {
      * than previously loaded feed's content (innerText).
      */
     describe('New Feed Selection', function() {
-      const feed = document.querySelector('.feed');
-      const feedOne = []; // Declare empty array intended to hold content
-      // (innerText) of first feed element.
+      let feedOneContent;
+      let feedTwoContent;
       beforeEach(function(done) {
-        loadFeed(0);
-        /* Convert feed element child object to array and push InnerText of
-         * child element to feedOne empty array declared above.
-         */
-        Array.from(feed.children).forEach(function(entry) {
-          feedOne.push(entry.innerText);
+        loadFeed(0, function() {
+          // Assign innerHTML DOM element of feed with index of 0 to variable.
+          feedOneContent = document.querySelector('.feed').innerHTML;
+          loadFeed(1, function() {
+            // Assign innerHTML DOM element of feed with index of 1 to variable.
+            feedTwoContent = document.querySelector('.feed').innerHTML;
+            done();
+          });
         });
-        loadFeed(1, done);
       });
       /* 'does feed content change' test - test that ensures when a new feed
        * is loaded by the loadFeed function that the content actually changes.
        * Remember, loadFeed() is asynchronous.
        */
       it('does feed content change', function() {
-        Array.from(feed.children).forEach(function(entry, index) {
-          const currentFeedContent = entry.innerText;
-          const feedOneContent = feedOne[index];
-          /* expectation to check that the innerText content of the currently
-           * loaded feed is not equal to the innerText content of the previously
-           * loaded feed.
+          /* expectation to check that the  content of feed one
+           * is not equal to the content of feed two.
            */
-          expect(currentFeedContent).not.toBe(feedOneContent);
+          expect(feedOneContent).not.toBe(feedTwoContent);
         });
       });
-    });
 }());
